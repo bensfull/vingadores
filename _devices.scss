@@ -1,0 +1,29 @@
+$primary-color: #e6242b96;
+$secondary-color: #8c1515;
+$accent-color: #f0f0f0;
+$background-color: #1b0d0d;
+$text-color: #fff;
+$hover-color: #ff4040;
+
+// Dispositivos Suportados
+.devices {
+    padding: 60px 50px;
+    background-color: $background-color;
+    text-align: center;
+  
+    h2 {
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+  
+    .device-icons {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+  
+      img {
+        width: 300px;
+      }
+    }
+  }
+  

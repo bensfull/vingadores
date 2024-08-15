@@ -1,0 +1,237 @@
+@use 'faq';
+@use 'devices';
+
+
+// Variáveis
+$primary-color: #e6242b96;
+$secondary-color: #8c1515;
+$accent-color: #f0f0f0;
+$background-color: #1b0d0d;
+$text-color: #fff;
+$hover-color: #ff4040;
+
+// Font-Face
+@font-face {
+  font-family: 'Avenir';
+  src: url('/fonts/Avenir-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('/fonts/Avenir-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
+// Estilos Globais
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Avenir', sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: $text-color;
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+// Header
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: $secondary-color;
+
+  .logo img {
+    width: 150px;
+  }
+
+  .nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+  }
+
+  .nav ul li a {
+    font-weight: bold;
+    &:hover {
+      color: $hover-color;
+    }
+  }
+
+  .cta {
+    display: flex;
+    gap: 20px;
+
+    .btn-primary {
+      background-color: $primary-color;
+      color: $text-color;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+
+    .btn-secondary {
+      border: 2px solid $primary-color;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      &:hover {
+        border-color: $hover-color;
+        color: $hover-color;
+      }
+    }
+  }
+}
+
+// Hero Section
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('/images/avengers-infinity-war-official-poster-2018-4o.webp') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .hero-content {
+    text-align: center;
+    color: $text-color;
+    z-index: 10;
+
+    h1 {
+      font-size: 64px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+
+    .btn-primary {
+      background-color: $primary-color;
+      padding: 15px 30px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 18px;
+      &:hover {
+        background-color: $hover-color;
+      }
+    }
+  }
+}
+
+// Section de Destaques
+.highlights {
+  padding: 60px 50px;
+  background-color: $background-color;
+
+  h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+
+  .movie-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .movie-item {
+    text-align: center;
+    img {
+      border-radius: 10px;
+      width: 100%;
+      max-width: 600px;
+    }
+    h3 {
+      margin-top: 15px;
+      font-size: 20px;
+    }
+  }
+}
+
+// Escolha do Plano
+.plans {
+  padding: 60px 50px;
+  background-color: $secondary-color;
+
+  h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+
+  .plan-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    .plan-card {
+      background-color: #222;
+      padding: 30px;
+      border-radius: 10px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+      h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .price {
+        font-size: 32px;
+        color: $primary-color;
+        margin-bottom: 20px;
+      }
+
+      .btn-primary {
+        background-color: $primary-color;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+        &:hover {
+          background-color: $hover-color;
+        }
+      }
+
+      &.popular {
+        border: 2px solid $primary-color;
+      }
+    }
+  }
+}
+
+
+
+// Footer
+.footer {
+  background-color: $secondary-color;
+  padding: 30px;
+  text-align: center;
+
+  p {
+    font-size: 14px;
+    color: $text-color;
+  }
+}

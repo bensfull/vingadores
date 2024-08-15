@@ -1,0 +1,252 @@
+.faq {
+  padding: 60px 50px;
+  background-color: #8c1515;
+}
+.faq h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.faq .faq-item {
+  border-bottom: 1px solid #333;
+  padding: 20px 0;
+  cursor: pointer;
+}
+.faq .faq-item h3 {
+  font-size: 24px;
+  color: rgba(197, 105, 108, 0.5882352941);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq .faq-item h3::after {
+  content: "+";
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+.faq .faq-item .faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  color: #fff;
+  font-size: 18px;
+  margin-top: 10px;
+}
+.faq .faq-item.active h3::after {
+  transform: rotate(45deg);
+}
+.faq .faq-item.active .faq-answer {
+  max-height: 200px;
+}
+
+.devices {
+  padding: 60px 50px;
+  background-color: #1b0d0d;
+  text-align: center;
+}
+.devices h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+.devices .device-icons {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.devices .device-icons img {
+  width: 300px;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/Avenir-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/Avenir-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Avenir", sans-serif;
+  background-color: #1b0d0d;
+  color: #fff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+a:hover {
+  color: rgba(230, 36, 43, 0.5882352941);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #8c1515;
+}
+.header .logo img {
+  width: 150px;
+}
+.header .nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+.header .nav ul li a {
+  font-weight: bold;
+}
+.header .nav ul li a:hover {
+  color: #ff4040;
+}
+.header .cta {
+  display: flex;
+  gap: 20px;
+}
+.header .cta .btn-primary {
+  background-color: rgba(230, 36, 43, 0.5882352941);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.header .cta .btn-primary:hover {
+  background-color: rgba(193, 22, 28, 0.5882352941);
+}
+.header .cta .btn-secondary {
+  border: 2px solid rgba(230, 36, 43, 0.5882352941);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.header .cta .btn-secondary:hover {
+  border-color: #ff4040;
+  color: #ff4040;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url("/images/avengers-infinity-war-official-poster-2018-4o.webp") no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero .hero-content {
+  text-align: center;
+  color: #fff;
+  z-index: 10;
+}
+.hero .hero-content h1 {
+  font-size: 64px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.hero .hero-content p {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+.hero .hero-content .btn-primary {
+  background-color: rgba(230, 36, 43, 0.5882352941);
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 18px;
+}
+.hero .hero-content .btn-primary:hover {
+  background-color: #ff4040;
+}
+
+.highlights {
+  padding: 60px 50px;
+  background-color: #1b0d0d;
+}
+.highlights h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+.highlights .movie-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.highlights .movie-item {
+  text-align: center;
+}
+.highlights .movie-item img {
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+}
+.highlights .movie-item h3 {
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+.plans {
+  padding: 60px 50px;
+  background-color: #8c1515;
+}
+.plans h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+.plans .plan-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.plans .plan-cards .plan-card {
+  background-color: #222;
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.plans .plan-cards .plan-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.plans .plan-cards .plan-card .price {
+  font-size: 32px;
+  color: rgba(230, 36, 43, 0.5882352941);
+  margin-bottom: 20px;
+}
+.plans .plan-cards .plan-card .btn-primary {
+  background-color: rgba(230, 36, 43, 0.5882352941);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.plans .plan-cards .plan-card .btn-primary:hover {
+  background-color: #ff4040;
+}
+.plans .plan-cards .plan-card.popular {
+  border: 2px solid rgba(230, 36, 43, 0.5882352941);
+}
+
+.footer {
+  background-color: #8c1515;
+  padding: 30px;
+  text-align: center;
+}
+.footer p {
+  font-size: 14px;
+  color: #fff;
+}/*# sourceMappingURL=styeles.css.map */
